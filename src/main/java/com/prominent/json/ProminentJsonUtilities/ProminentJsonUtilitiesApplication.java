@@ -34,7 +34,7 @@ public class ProminentJsonUtilitiesApplication {
 		@Override
 		public void run(String... args) throws Exception {
 
-			byte[] jsonData = Files.readAllBytes(Paths.get("D:\\prominent\\employee.txt"));
+			byte[] jsonData = Files.readAllBytes(Paths.get("src/main/resources/Bath&Bristol_Sample.json"));
 			ObjectMapper mapper = new ObjectMapper();
 			mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 			Root root = mapper.readValue(jsonData, Root.class);
